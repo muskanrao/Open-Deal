@@ -7,19 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B15BA329A64AD2008ACC89 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B15BA229A64AD2008ACC89 /* MainCollectionViewCell.swift */; };
+		18BFB36729A0F06000FA668A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFB36629A0F06000FA668A /* TabViewController.swift */; };
+		18BFB36929A1058100FA668A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFB36829A1058100FA668A /* MainViewController.swift */; };
+		18BFB36B29A1059000FA668A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFB36A29A1059000FA668A /* LocationViewController.swift */; };
+		18BFB36D29A1059B00FA668A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFB36C29A1059A00FA668A /* CartViewController.swift */; };
+		18EEA61D299DD0D200DAD6EB /* VendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA61C299DD0D200DAD6EB /* VendorLoginViewController.swift */; };
+		18EEA61F299E300E00DAD6EB /* CustomerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA61E299E300E00DAD6EB /* CustomerLoginViewController.swift */; };
+		18EEA621299E406100DAD6EB /* VResgisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA620299E406100DAD6EB /* VResgisterViewController.swift */; };
+		18EEA623299E407300DAD6EB /* CRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA622299E407300DAD6EB /* CRegisterViewController.swift */; };
 		18F6B12C2991823D007F095D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6B12B2991823D007F095D /* AppDelegate.swift */; };
 		18F6B12E2991823D007F095D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6B12D2991823D007F095D /* SceneDelegate.swift */; };
-		18F6B1302991823D007F095D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6B12F2991823D007F095D /* ViewController.swift */; };
+		18F6B1302991823D007F095D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6B12F2991823D007F095D /* HomeViewController.swift */; };
 		18F6B1332991823D007F095D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6B1312991823D007F095D /* Main.storyboard */; };
 		18F6B1352991823E007F095D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F6B1342991823E007F095D /* Assets.xcassets */; };
 		18F6B1382991823E007F095D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6B1362991823E007F095D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B15BA229A64AD2008ACC89 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		18BFB36629A0F06000FA668A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		18BFB36829A1058100FA668A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		18BFB36A29A1059000FA668A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		18BFB36C29A1059A00FA668A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		18EEA61C299DD0D200DAD6EB /* VendorLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorLoginViewController.swift; sourceTree = "<group>"; };
+		18EEA61E299E300E00DAD6EB /* CustomerLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLoginViewController.swift; sourceTree = "<group>"; };
+		18EEA620299E406100DAD6EB /* VResgisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VResgisterViewController.swift; sourceTree = "<group>"; };
+		18EEA622299E407300DAD6EB /* CRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRegisterViewController.swift; sourceTree = "<group>"; };
 		18F6B1282991823D007F095D /* openDeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openDeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6B12B2991823D007F095D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F6B12D2991823D007F095D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18F6B12F2991823D007F095D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18F6B12F2991823D007F095D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18F6B1322991823D007F095D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18F6B1342991823E007F095D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F6B1372991823E007F095D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +55,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180F6CB6299E9BCE0006D3BF /* VendorRegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				18EEA61C299DD0D200DAD6EB /* VendorLoginViewController.swift */,
+				18EEA620299E406100DAD6EB /* VResgisterViewController.swift */,
+			);
+			path = VendorRegisterView;
+			sourceTree = "<group>";
+		};
+		180F6CB7299E9BDC0006D3BF /* CustomerRegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				18EEA61E299E300E00DAD6EB /* CustomerLoginViewController.swift */,
+				18EEA622299E407300DAD6EB /* CRegisterViewController.swift */,
+			);
+			path = CustomerRegisterView;
+			sourceTree = "<group>";
+		};
+		18BFB36529A0F04D00FA668A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18BFB36629A0F06000FA668A /* TabViewController.swift */,
+				18BFB36829A1058100FA668A /* MainViewController.swift */,
+				18B15BA229A64AD2008ACC89 /* MainCollectionViewCell.swift */,
+				18BFB36A29A1059000FA668A /* LocationViewController.swift */,
+				18BFB36C29A1059A00FA668A /* CartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		18F6B11F2991823D007F095D = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +106,10 @@
 			children = (
 				18F6B12B2991823D007F095D /* AppDelegate.swift */,
 				18F6B12D2991823D007F095D /* SceneDelegate.swift */,
-				18F6B12F2991823D007F095D /* ViewController.swift */,
+				18BFB36529A0F04D00FA668A /* Controller */,
+				18F6B12F2991823D007F095D /* HomeViewController.swift */,
+				180F6CB7299E9BDC0006D3BF /* CustomerRegisterView */,
+				180F6CB6299E9BCE0006D3BF /* VendorRegisterView */,
 				18F6B1312991823D007F095D /* Main.storyboard */,
 				18F6B1342991823E007F095D /* Assets.xcassets */,
 				18F6B1362991823E007F095D /* LaunchScreen.storyboard */,
@@ -138,9 +189,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F6B1302991823D007F095D /* ViewController.swift in Sources */,
+				18F6B1302991823D007F095D /* HomeViewController.swift in Sources */,
 				18F6B12C2991823D007F095D /* AppDelegate.swift in Sources */,
+				18EEA623299E407300DAD6EB /* CRegisterViewController.swift in Sources */,
+				18EEA621299E406100DAD6EB /* VResgisterViewController.swift in Sources */,
+				18EEA61F299E300E00DAD6EB /* CustomerLoginViewController.swift in Sources */,
+				18BFB36B29A1059000FA668A /* LocationViewController.swift in Sources */,
 				18F6B12E2991823D007F095D /* SceneDelegate.swift in Sources */,
+				18B15BA329A64AD2008ACC89 /* MainCollectionViewCell.swift in Sources */,
+				18BFB36D29A1059B00FA668A /* CartViewController.swift in Sources */,
+				18BFB36929A1058100FA668A /* MainViewController.swift in Sources */,
+				18EEA61D299DD0D200DAD6EB /* VendorLoginViewController.swift in Sources */,
+				18BFB36729A0F06000FA668A /* TabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
