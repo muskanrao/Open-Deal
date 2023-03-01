@@ -87,7 +87,7 @@ class MainViewController: UIViewController {
         label.font = UIFont(name: "Times New Roman", size: 55)
         label.font = .boldSystemFont(ofSize: 55)
         label.textColor = .gray
-        label.text = "ONE DEAL"
+        label.text = "OPEN DEAL"
         label.textAlignment = .center
         
        // label.font = .boldSystemFont(ofSize: 30)
