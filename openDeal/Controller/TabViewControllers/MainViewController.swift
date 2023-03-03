@@ -89,8 +89,6 @@ class MainViewController: UIViewController {
         label.textColor = .gray
         label.text = "OPEN DEAL"
         label.textAlignment = .center
-        
-       // label.font = .boldSystemFont(ofSize: 30)
         label.textColor = .black
         label.numberOfLines = .zero
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -130,7 +128,8 @@ class MainViewController: UIViewController {
         collectionView.isPagingEnabled = true
         collectionView.isScrollEnabled = true
        // collectionView.heightAnchor.constraint(equalToConstant: 210).isActive = true
-       // view.addSubview(collectionView)
+        onlineShopButton.addTarget(self, action: #selector(onlinePressed), for: .touchUpInside)
+        offlineShopButton.addTarget(self, action: #selector(offlinePressed), for: .touchUpInside)
         imageList = [
             .init(image: "deal"),//, label: "No need for searching anymore, we are here with best places and deals."),
             .init(image: "gifts"),//, label: "We helps you to provide best gifts for your friends and family."),
@@ -139,9 +138,20 @@ class MainViewController: UIViewController {
        // collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
         //collectionView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         self.layout()
+        
+        
 
     
     }
+    
+    @objc func onlinePressed() {
+        print("online shop")
+    }
+    @objc func offlinePressed(){
+        print("hi")
+    }
+    
+    
     
     private func labelAnimation(){
         
@@ -176,6 +186,8 @@ class MainViewController: UIViewController {
         
         let stackView = UIStackView(arrangedSubviews: [onlineShopButton, offlineShopButton])
         stackView.axis = .vertical
+        stackView.addSubview(onlineShopButton)
+        stackView.addSubview(offlineShopButton)
         stackView.distribution = .fillEqually
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -185,15 +197,13 @@ class MainViewController: UIViewController {
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         stackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
-        
-        
-       
-        
-        
+
     }
 
 }
+
+
+//MARK: -CollectionView Delegate
 
 extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
    

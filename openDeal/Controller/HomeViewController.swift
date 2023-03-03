@@ -89,8 +89,6 @@ class HomeViewController: UIViewController {
         customerButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
         customerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        
-        
     }
     
     @objc  func vendLoginPressed(){
