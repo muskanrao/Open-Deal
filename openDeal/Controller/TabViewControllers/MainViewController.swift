@@ -67,21 +67,24 @@ class MainViewController: UIViewController {
     var onlineShopButton : UIButton =  {
         let button = UIButton(type: .system)
         button.setTitle("ONLINE SHOP", for: .normal)
-        button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .black
-        button.titleLabel?.font = .boldSystemFont(ofSize: 25)
+        button.titleLabel?.font  = .boldSystemFont(ofSize: 25)
+        button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+        
     }()
     var offlineShopButton : UIButton =  {
         let button = UIButton(type: .system)
         button.setTitle("OFFLINE SHOP", for: .normal)
-        button.setTitleColor(.white, for: .normal)
+      
         button.backgroundColor = .black
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+  
     var downLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Times New Roman", size: 55)
@@ -102,7 +105,6 @@ class MainViewController: UIViewController {
     ]
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -112,43 +114,35 @@ class MainViewController: UIViewController {
        //view.addSubview(productCollectionView)
         view.addSubview(shoppingLabel)
         pageControl.isUserInteractionEnabled = false
-        
-        //let flowLayout = UICollectionViewFlowLayout()
-        //collectionView = UICollectionView(frame: view.frame.insetBy(dx: 400, dy: 200), collectionViewLayout: flowLayout)
-        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell().identifier)
-       
+        onlineShopButton.addTarget(self, action: #selector(onlinePressed), for: .touchUpInside)
+        offlineShopButton.addTarget(self, action: #selector(offlinePressed), for: .touchUpInside)
      
+        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell().identifier)
         if let layout  = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
         }
-        
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
         collectionView.isScrollEnabled = true
-       // collectionView.heightAnchor.constraint(equalToConstant: 210).isActive = true
-        onlineShopButton.addTarget(self, action: #selector(onlinePressed), for: .touchUpInside)
-        offlineShopButton.addTarget(self, action: #selector(offlinePressed), for: .touchUpInside)
+        view.isUserInteractionEnabled = true
+        onlineShopButton.isUserInteractionEnabled = true
+        offlineShopButton.isUserInteractionEnabled = true
         imageList = [
             .init(image: "deal"),//, label: "No need for searching anymore, we are here with best places and deals."),
             .init(image: "gifts"),//, label: "We helps you to provide best gifts for your friends and family."),
             .init(image: "sale")//, label: "Search nearby shops and use our best services.")
         ]
-       // collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
-        //collectionView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        self.layout()
-        
-        
 
-    
+        self.layout()
     }
-    
+   
     @objc func onlinePressed() {
-        print("online shop")
+        navigationController?.pushViewController(HomeShopViewController(), animated: true)
     }
     @objc func offlinePressed(){
-        print("hi")
+        navigationController?.pushViewController(LocationViewController(), animated: true)
     }
     
     
@@ -166,37 +160,31 @@ class MainViewController: UIViewController {
         pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor,constant: 20).isActive = true
         pageControl.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 130).isActive = true
         
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(view)
-        view.topAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: 40).isActive = true
-        view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
-        view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
-        
         view.addSubview(downLabel)
-        downLabel.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        downLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        downLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        downLabel.topAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: 40).isActive = true
+        downLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+        downLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
         
         view.addSubview(shoppingLabel)
         shoppingLabel.topAnchor.constraint(equalTo: downLabel.bottomAnchor, constant: 30).isActive = true
-        shoppingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        shoppingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        shoppingLabel.leadingAnchor.constraint(equalTo: downLabel.leadingAnchor).isActive = true
+        shoppingLabel.trailingAnchor.constraint(equalTo:  downLabel.trailingAnchor).isActive = true
         shoppingLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
         let stackView = UIStackView(arrangedSubviews: [onlineShopButton, offlineShopButton])
-        stackView.axis = .vertical
+        view.addSubview(stackView)
         stackView.addSubview(onlineShopButton)
         stackView.addSubview(offlineShopButton)
+        stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
         stackView.contentMode = .scaleToFill
         stackView.topAnchor.constraint(equalTo: shoppingLabel.bottomAnchor, constant: 10).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: downLabel.leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: downLabel.trailingAnchor).isActive = true
         stackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+      
 
     }
 
@@ -222,7 +210,6 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
         {
             let width = 400;
-           // let width = (screenSize.width - leftAndRightPaddings)/numberOfItemsPerRow
             return CGSize(width: width, height: 200)
         }
     

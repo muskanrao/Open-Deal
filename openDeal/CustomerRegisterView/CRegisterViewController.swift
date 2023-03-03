@@ -66,6 +66,7 @@ class CRegisterViewController: UIViewController {
         view.addSubview(signupButton)
         view.addSubview(profile)
         view.addSubview(otpButton)
+        
         let tap = UIGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
